@@ -6,10 +6,10 @@
 Countr is an advanced counting bot which can manage a counting channel in your guild. It's very simple to add it to your server:
 
 1. Add the bot with [this invite link](https://google.com/?q=soon).
-2. Do `c!setup`.
+2. Do `c!setup`, or link a pre-existing channel with `c!link <channel>` and `c!set <count>`.
 3. Count in the counting channel.
 
-Yeah, it's actually that simple to set up.
+Yeah, it's actually that simple to set up. *mic drop* 🎤
 
 ## Purpose
 
@@ -17,9 +17,11 @@ There is a lot of multi-purpose bots out there, some of them may also include a 
 
 Countr has a simple setup but also has cool advanced features, such as modules, flows and more.
 
-## Stats
+## Videos
 
-[![discordbots.org](https://discordbots.org/api/widget/467377486141980682.svg)](https://discordbots.org/bot/countr)
-[![discordbotlist.com](https://discordbotlist.com/bots/467377486141980682/widget)](https://discordbotlist.com/bots/467377486141980682)
-[![divinediscordbots.com](https://divinediscordbots.com/api/widget/467377486141980682.svg)](https://divinediscordbots.com/bots/467377486141980682)
-[![discord.boats](https://discord.boats/api/widget/countr)](https://discord.boats/bot/countr)
+These videos are from content creators. These content creators have given consent to be added to this page. They have not been paid to say anything in these videos. We will contact you if we feel like we want to add it to this page, do not contact us the other way around.
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JKKKHH6Q2S4?start=242" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/l8OQSRJtlXI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
