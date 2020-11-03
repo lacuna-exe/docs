@@ -19,9 +19,11 @@ Countr has a simple setup but also has cool advanced features, such as modules, 
 
 ## Videos
 
-These videos are from content creators. These content creators have given consent to be added to this page. They have not been paid to say anything in these videos. We will contact you if we feel like we want to add it to this page, do not contact us the other way around.
+These videos are from content creators. These content creators have given consent to be added to this page. They have not been paid to say anything in these videos.
 
 <center>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JKKKHH6Q2S4?start=242" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/l8OQSRJtlXI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
+
+We will contact you if we feel like we want your video added to this page, do not contact us the other way around.
