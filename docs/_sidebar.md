@@ -5,6 +5,7 @@
   - [Self-hosting](/selfhosting)
   - [Premium](/premium)
   - [Commands](/commands)
+  - [Flows](/flows)
   - [Features](/features)
   - [Troubleshooting & FAQ](/troubleshooting)
 - [Links](#)
