@@ -39,6 +39,6 @@ We store the necessary data that Countr needs, no unnecessary user information i
 
 We are aware it might be slow sometimes. This is often due to rate limiting, but can also be the VPS being too weak. If you want to get a faster bot available, [you have to check out what we offer in our Premium package](/premium)!
 
-# I need further help!
+## I need further help!
 
-Please, join our [support server](https://discord.gg/Ccj5bjb) and we will help you out!
+Please, join our [support server](https://promise.solutions/discord) and we will help you out!
