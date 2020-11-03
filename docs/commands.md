@@ -1,563 +1,426 @@
-# Understanding Usage
+# Commands for Everyone
+Everyone have access to these commands.
 
-- Everything in angle brackets are user input, for example `<count>`.
-- Everything in square brackets are optional, for example `[repost]` or `[<search query>]`.
-- Everything without any brackets are required in the command for it to work, for example `all`
-- Sometimes you need to choose between multiple inputs, for example in `<mode: each|every|score>` or `all|<members...>`.
-- Sometimes an argument supports multiple inputs, for example in `<regex ...>`
-- Sometimes a combination of these are used.
-
-For example, in this command: `c!command <abc> [def] [<ghi>] jkl <mno: pq|rs> <tuv ...>`:
-- `<abc>` is required user input.
-- `[def]` is optional, but is not user input.
-- `[<ghi>]` is optional user input.
-- `jkl` is required, but is not user input.
-- `<mno: pq|rs>` is required user input, but can only choose between `pq` and `rs`.
-- `<tuv ...>` is required user input, but also supports multiple inputs.
-
-Still doesn't understand? Don't worry, most of the advanced commands have an example you can go out from.
-
-# Level 0: Everyone
-Everyone get access to these commands.
-- [c!help](#chelp): Get help on commands.
+- [c!count](#ccount): Get the current count.
+- [c!help](#chelp): Get help on how to use the bot.
 - [c!info](#cinfo): Get information and stats about the bot.
-- [c!invite](#cinvite): Get an invite to add the bot.
 - [c!notifications](#cnotifications): Get a list of your notifications in the server.
 - [c!notifyme](#cnotifyme): Get a notification whenever the server reach whatever count you want.
 - [c!ping](#cping): Get the latency of the bot.
 - [c!removenotif](#cremovenotif): Remove a notification.
 - [c!scoreboard](#cscoreboard): Get the current scoreboard of the server.
-- [c!webboard](#cwebboard): Gets a link to the webboard of Countr
 
-# Level 1: Moderator
-Everyone with the `MANAGE_MESSAGES`-permission get access to these commands.
-- [c!listpins](#clistpins): Get a list of pintriggers.
+# Commands for Mods
+Everyone with the Manage Messages-permission have access to these commands.
+
+- [c!listflows](#clistflows): Get a list of all the flows.
 - [c!listregex](#clistregex): Get a list of regex filters.
-- [c!listroles](#clistroles): Get a list of role rewards.
 - [c!setcount](#csetcount): Set the count.
 
-# Level 2: Admin
-Everyone with the `MANAGE_SERVER`-permission get access to these commands.
-- [c!addpin](#caddpin): Add a pintrigger so big milestones gets pinned in chat.
-- [c!addregex](#caddregex): Add a regex filter for the talking module, filtering unwanted messages.
-- [c!addrole](#caddrole): Add a rolereward that gets rewarded by counting.
-- [c!addtoscore](#caddtoscore): Set a member's score
-- [c!autosetup](#cautosetup): Quickly set up a counting channel.
+# Commands for Admins
+Everyone with the Manage Server-permission have access to these commands.
+
+- [c!addregex](#caddregex): Add a regex filter. (useful with the talking module)
+- [c!addtoscore](#caddtoscore): Add to a member's score (or multiple members' scores)
+- [c!createflow](#ccreateflow): Create a new flow to customize your counting setup completely.
+- [c!deleteflow](#cdeleteflow): Delete a flow.
 - [c!disabletimeoutrole](#cdisabletimeoutrole): Reset and disable the timeout role.
-- [c!editpin](#ceditpin): Edit a pintrigger.
-- [c!editrole](#ceditrole): Edit a rolereward.
+- [c!editflow](#ceditflow): Edit a flow.
 - [c!exportscores](#cexportscores): Export scores to a JSON-file.
 - [c!importscores](#cimportscores): Import scores from a JSON-file. Upload the JSON-file with the command itself.
 - [c!link](#clink): Link a counting channel manually.
-- [c!liveboard](#cliveboard): Set up a liveboard in your server. (Premium)
+- [c!module](#cmodule): Manage modules you can enable or disable in your server.
+- [c!prunescores](#cprunescores): Prune the scoreboard for members who have left your server.
 - [c!removefromscore](#cremovefromscore): Set a member's score
-- [c!removepin](#cremovepin): Remove a pintrigger.
 - [c!removeregex](#cremoveregex): Remove a regex filter.
-- [c!removerole](#cremoverole): Remove a rolereward.
-- [c!removetimeoutrole](#cremovetimeoutrole): Remove and disable the timeout role.
 - [c!resetcount](#cresetcount): Reset the count.
-- [c!resetscore](#cresetscore): Reset a member's or multiple members' score.
-- [c!setprefix](#csetprefix): Set a new prefix for the bot.
-- [c!setscore](#csetscore): Set a member's or multiple members' score.
-- [c!settimeoutrole](#csettimeoutrole): Set a timeout role, so when someone counts <fail amount> times wrong within <time> seconds, they will get the role. Works best if you deny the role access to the channel.
-- [c!settopic](#csettopic): Set the topic of the channel.
-- [c!toggle](#ctoggle): Manage modules you can enable or disable in your server.
+- [c!resetscore](#cresetscore): Reset a member's score (or multiple members' scores)
+- [c!setprefix](#csetprefix): Set the prefix of the bot.
+- [c!setscore](#csetscore): Set a member's score (or multiple members' scores)
+- [c!settimeoutrole](#csettimeoutrole): Set a member's score (or multiple members' scores)
+- [c!setup](#csetup): Quickly set up a counting channel. You only need to do this once.
 - [c!unlink](#cunlink): Unlink the current counting channel.
 
-# Level 3: Owner
-Only the owner of the server can access these commands.
+# Commands for Server Owners
+Only the server owner has access to these commands.
+
 - [c!dump](#cdump): Dump a server's data to DMs. (GDPR-compliant)
 - [c!factoryreset](#cfactoryreset): Reset all data Countr has stored about this server.
 
-## c!addpin
-
-Add a pintrigger so big milestones gets pinned in chat.
-
-**Usage:** `c!addpin <mode: each|only> <count> [<action: keep|repost>]`
-
-**Arguments:** 
-- `<mode: each|only>`: If you use each, it will pin every &lt;count&gt; count. If you use only, it will only pin count &lt;count&gt;.
-- `<count>`: The count you want to reference in your mode.
-- `[<action: keep|repost>]`: If you use repost, it will repost the message before pinning it. Default is keep, which does not do this.
-
-**Examples:** 
-- `c!addpin each 1000 repost`: Will pin every 1000th count after reposting it, including 2000 and 3000 etc.
-- `c!addpin only 420`: Will pin the count 1337 as-is.
-
-**Alias:** `c!+pin`
-
 ## c!addregex
 
-Add a regex filter for the talking module, filtering unwanted messages.
+Add a regex filter. (useful with the talking module)
 
 **Usage:** `c!addregex <regex ...>`
-
-**Argument:** 
 - `<regex ...>`: The regex you want to filter out of the chat. Get info on how to create a regex here: https://flaviocopes.com/javascript-regular-expressions/#regular-expressions-choices
 
-**Examples:** 
+**Examples:**
 - `c!addregex duck|poop`: Will filter out all messages containing duck and/or poop.
 - `c!addregex [A-Z]`: Will filter out all messages with capital letters.
 - `c!addregex [A-Ca-cX-Zx-z]`: Will filter out A, B, C, X, Y, Z - regardless if it's capital or not.
 
-**Alias:** `c!+regex`
+**Permission Level:** 2, Admins
 
-## c!addrole
-
-Add a rolereward that gets rewarded by counting.
-
-**Usage:** `c!addrole <role> <mode: each|only|score> <count> <duration: temporary|permanent>`
-
-**Arguments:** 
-- `<role>`: The role you want to be the reward. If you plan on using the role name, use underscores instead of spaces.
-- `<mode: each|only|score>`: If you use each, it will reward someone for every &lt;count&gt; count. If you use only, it will only reward someone for count &lt;count&gt;. If you use score, it will reward someone if their score hit &lt;count&gt;.
-- `<count>`: The count you want to reference in your mode.
-- `<duration: temporary|permanent>`: If you use temporary, the users will lose their role again if someone else gets rewarded with the same role. If you use permanent, they keep it forever until someone removes it.
-
-**Examples:** 
-- `c!addrole Count_Champ each 1000 temporary`: Will give users the Count Champ-role every 1000th count in the server, including 2000 and 3000 etc. And the role will last until someone else gets rewarded.
-- `c!addrole 469523835595653120 only 420 permanent`: Will give users the role with ID 469523835595653120 if they count the 420th count in the server. It will stay on until someone else removes it.
-
-**Alias:** `c!+role`
+**Aliases:** `+regex`, `addfilter`, `+filter`
 
 ## c!addtoscore
 
-Set a member's score
+Add to a member's score (or multiple members' scores)
 
-**Usage:** `c!addtoscore <member(s ...) and/or role(s ...)> <score>`
+**Usage:** `c!addtoscore <member(s ...)> <number>`
+- `<member(s ...)>`: The member(s) you want to add the score of
+- `<number>`: The number you want to add to the scores
 
-**Arguments:** 
-- `<member(s ...) and/or role(s ...)>`: The member(s) or members of role(s) you want to set the score of
-- `<score>`: The new score
+**Examples:**
+- `c!addtoscore 110090225929191424 9999999`: Add 9999999 to user with ID 110090225929191424.
+- `c!addtoscore @Promise#0001 1337`: Add 1337 to Promise#0001's score.
+- `c!addtoscore 110090225929191424 @Promise#0001 1000`: Add 1000 to user with ID 110090225929191424 and to Promise#0001.
 
-**Examples:** 
-- `c!addtoscore 110090225929191424 9999999`: Will set member with ID 110090225929191424's score to 9999999.
-- `c!addtoscore @Promise#0001 @CountingGods 1337`: Will set Promise#0001's and all members in role Counting Gods' score to 1337.
+**Permission Level:** 2, Admins
 
-**Alias:** `c!+score`
+**Aliases:** `+score`
 
-## c!autosetup
+## c!count
 
-Quickly set up a counting channel.
+Get the current count.
 
-**Usage:** `c!autosetup`
+**Permission Level:** 0, All
 
-**Alias:** `c!setup`
+**Aliases:** `!`
+
+## c!createflow
+
+Create a new flow to customize your counting setup completely.
+
+**Permission Level:** 2, Admins
+
+**Aliases:** `addflow`, `+flow`
+
+## c!deleteflow
+
+Delete a flow.
+
+**Usage:** `c!deleteflow <flow ID>`
+- `<flow ID>`: The ID of the flow you want to delete. This can be found in the 'listflows'-command.
+
+**Permission Level:** 2, Admins
+
+**Aliases:** `delflow`, `removeflow`, `-flow`
 
 ## c!disabletimeoutrole
 
 Reset and disable the timeout role.
 
-**Usage:** `c!disabletimeoutrole`
+**Permission Level:** 2, Admins
 
-**Aliases:** `c!resettimeoutrole`, `c!re=timeoutrole`
+**Aliases:** `resettimeoutrole`, `re=timeoutrole`
 
 ## c!dump
 
 Dump a server's data to DMs. (GDPR-compliant)
 
-**Usage:** `c!dump`
+**Permission Level:** 3, Server Owner
 
-**Alias:** `c!export`
+**Aliases:** `export`
 
-## c!editpin
+## c!editflow
 
-Edit a pintrigger.
+Edit a flow.
 
-**Usage:** `c!editpin <ID> <property: mode|count|action> <value>`
+**Usage:** `c!editflow <flow ID>`
+- `<flow ID>`: The ID of the flow you want to edit. This can be found in the 'listflows'-command.
 
-**Arguments:** 
-- `<ID>`: The pintrigger's ID.
-- `<property: mode|count|action>`: The property you want to change.
-- `<value>`: The new value for the property. See the usage of `c!addpin` for values to choose from.
+**Permission Level:** 2, Admins
 
-**Examples:** 
-- `c!editpin wnoK3d mode each`: Will change the pintrigger with ID wnoK3d's mode to each.
-- `c!editpin 89hJzm count 1337`: Will change the pintrigger with ID 89hJzm's count to 1337.
-- `c!editpin IfS80j action repost`: Will change the pintrigger with ID IfS80j's action to repost.
-
-**Alias:** `c!=pin`
-
-## c!editrole
-
-Edit a rolereward.
-
-**Usage:** `c!editrole <ID> <property: role|mode|count|duration> <value>`
-
-**Arguments:** 
-- `<ID>`: The rolereward's ID.
-- `<property: role|mode|count|duration>`: The property you want to change.
-- `<value>`: The new value for the property. See the usage of `c!addrole` for values to choose from.
-
-**Examples:** 
-- `c!editrole MnRIf4 mode each`: Will change the rolereward with ID MnRIf4's mode to each.
-- `c!editrole jPFj78 count 1337`: Will change the rolereward with ID jPFj78's count to 1337.
-
-**Alias:** `c!=role`
+**Aliases:** `modifyflow`, `=flow`
 
 ## c!exportscores
 
 Export scores to a JSON-file.
 
-**Usage:** `c!exportscores <member(s ...) and/or role(s ...)>|all`
+**Usage:** `c!exportscores <member(s ...)>|raw`
+- `<member(s ...)>|raw`: The member(s) you want to export the scores of.
 
-**Argument:** 
-- `<member(s ...) and/or role(s ...)>|all`: The member(s) and/or role(s') members you want to export the scores of.
-
-**Examples:** 
+**Examples:**
 - `c!exportscores 110090225929191424`: Export the score of user with ID 110090225929191424.
 - `c!exportscores @Promise#0001`: Export the score of user Promise#0001.
 - `c!exportscores 110090225929191424 @Promise#0001`: Export the scores of user with ID 110090225929191424 and user Promise#0001.
-- `c!exportscores @Staff Server_Moderators`: Export the scores of all members of roles Staff and Server Moderators.
-- `c!exportscores 110090225929191424 @Promise#0001 @Staff Server_Moderators`: Mix members and roles if you want to.
-- `c!exportscores all`: Export all scores.
+- `c!exportscores raw`: Export all scores raw.
+
+**Permission Level:** 2, Admins
 
 ## c!factoryreset
 
 Reset all data Countr has stored about this server.
 
-**Usage:** `c!factoryreset`
+**Permission Level:** 3, Server Owner
 
 ## c!help
 
-Get help on commands.
+Get help on how to use the bot.
 
-**Usage:** `c!help [-all] [<search ...>]`
+**Usage:** `c!help [search ...]`
+- `[search ...]`: Something you want to search for, for example a command.
 
-**Arguments:** 
-- `[-all]`: If you include this, it will show all the commands excluding bot-admins-only commands.
-- `[<search ...>]`: Search for a specific command, category or related.
+**Examples:**
+- `c!help help`: Get help on the command help. Oh wait, you already did.
 
-**Examples:** 
-- `c!help notifyme`: Will give you infomation about the notifyme-command.
-- `c!help -all add`: Will give you all commands that have "add" in their command, description or usage.
+**Permission Level:** 0, All
 
-**Aliases:** `c!commands`, `c!?`
+**Aliases:** `commands`
 
 ## c!importscores
 
 Import scores from a JSON-file. Upload the JSON-file with the command itself.
 
-**Usage:** `c!importscores <method: set|add>`
+**Usage:** `c!importscores set|add`
+- `set|add`: Decide if you want to overwrite the scores or add to the existing scores.
 
-**Argument:** 
-- `<method: set|add>`: Decide if you want to overwrite the scores or add to the scores.
-
-**Examples:** 
+**Examples:**
 - `c!importscores set`: Will overwrite all the scores to the one in the file.
 - `c!importscores add`: Will add the scores to the users' previous scores.
+
+**Permission Level:** 2, Admins
 
 ## c!info
 
 Get information and stats about the bot.
 
-**Usage:** `c!info`
+**Permission Level:** 0, All
 
-**Aliases:** `c!botinfo`, `c!botstats`
-
-## c!invite
-
-Get an invite to add the bot.
-
-**Usage:** `c!invite`
-
-**Aliases:** `c!addme`, `c!inviteme`
+**Aliases:** `stats`, `botinfo`, `botstats`
 
 ## c!link
 
 Link a counting channel manually.
 
 **Usage:** `c!link [<channel>]`
-
-**Argument:** 
 - `[<channel>]`: The new counting channel. Leave empty to choose current channel.
 
-**Alias:** `c!connect`
+**Permission Level:** 2, Admins
 
-## c!listpins
+**Aliases:** `connect`
 
-Get a list of pintriggers.
+## c!listflows
 
-**Usage:** `c!listpins`
+Get a list of all the flows.
 
-**Aliases:** `c!pinlist`, `c!pins`, `c!pintriggers`
+**Permission Level:** 1, Mods
+
+**Aliases:** `flows`
 
 ## c!listregex
 
 Get a list of regex filters.
 
-**Usage:** `c!listregex`
+**Permission Level:** 1, Mods
 
-**Aliases:** `c!regexlist`, `c!regexfilters`
+**Aliases:** `regexlist`, `regexfilters`, `listfilters`
 
-## c!listroles
+## c!module
 
-Get a list of role rewards.
+Manage modules you can enable or disable in your server.
 
-**Usage:** `c!listroles`
+**Usage:** `c!module [<module>] [on|off]`
+- `[<module>]`: The module you want more information on, or turn on/off.
+- `[on|off]`: Whether you want to turn the module on or off.
 
-**Aliases:** `c!rolelist`, `c!roles`, `c!rolerewards`
+**Examples:**
+- `c!module allow-spam on`: Toggle the module allow-spam.
+- `c!module webhook`: Get more help on the webhook-module.
 
-## c!liveboard
+**Permission Level:** 2, Admins
 
-Set up a liveboard in your server. (Premium)
-
-**Usage:** `c!liveboard <channel>|disable`
-
-**Argument:** 
-- `<channel>|disable`: Specify what channel you want the liveboard message to go in, or disable it.
+**Aliases:** `modules`
 
 ## c!notifications
 
 Get a list of your notifications in the server.
 
-**Usage:** `c!notifications`
+**Permission Level:** 0, All
 
-**Aliases:** `c!notiflist`, `c!notifs`, `c!alert`, `c!listnotifs`, `c!listnotifications`
+**Aliases:** `notiflist`, `notifs`, `alerts`, `listalerts`, `listnotifs`, `listnotifications`
 
 ## c!notifyme
 
 Get a notification whenever the server reach whatever count you want.
 
 **Usage:** `c!notifyme [each] <count>`
-
-**Arguments:** 
-- `[each]`: If you include this, it will be each &lt;count&gt;.
+- `[each]`: If you include this, it will notify you of a multiplication of &lt;count&gt;.
 - `<count>`: The count you want to get notified of.
 
-**Examples:** 
+**Examples:**
 - `c!notifyme 420`: Get notified whenever the server reach count 420.
-- `c!notifyme each 1000`: Get notified for every 1000th count, including 2000 and 3000.
+- `c!notifyme each 1000`: Get notified for every 1000th count, including 2000 and 3000 and so on.
 
-**Aliases:** `c!alertme`, `c!notify`, `c!alert`
+**Permission Level:** 0, All
+
+**Aliases:** `alertme`, `notify`, `alert`
 
 ## c!ping
 
 Get the latency of the bot.
 
-**Usage:** `c!ping`
+**Permission Level:** 0, All
 
-**Aliases:** `c!pong`, `c!latency`, `c!uptime`
+**Aliases:** `pong`, `latency`, `uptime`
+
+## c!prunescores
+
+Prune the scoreboard for members who have left your server.
+
+**Permission Level:** 2, Admins
 
 ## c!removefromscore
 
 Set a member's score
 
-**Usage:** `c!removefromscore <member(s ...) and/or role(s ...)> <score>`
-
-**Arguments:** 
-- `<member(s ...) and/or role(s ...)>`: The member(s) or members of role(s) you want to set the score of
+**Usage:** `c!removefromscore <member(s ...)> <score>`
+- `<member(s ...)>`: The member(s) or members of role(s) you want to set the score of
 - `<score>`: The new score
 
-**Examples:** 
+**Examples:**
 - `c!removefromscore 110090225929191424 9999999`: Will set member with ID 110090225929191424's score to 9999999.
 - `c!removefromscore @Promise#0001 @CountingGods 1337`: Will set Promise#0001's and all members in role Counting Gods' score to 1337.
 
-**Aliases:** `c!-fromscore`, `c!-score`
+**Permission Level:** 2, Admins
+
+**Aliases:** `-fromscore`, `-score`
 
 ## c!removenotif
 
 Remove a notification.
 
 **Usage:** `c!removenotif <ID(s ...)>|all`
-
-**Argument:** 
 - `<ID(s ...)>|all`: The notification ID(s) you want to remove, or all notifications.
 
-**Examples:** 
+**Examples:**
 - `c!removenotif bd9kJK`: Remove notification with ID bd9kJK.
 - `c!removenotif all`: Remove all notifications.
 
-**Alias:** `c!-notif`
+**Permission Level:** 0, All
 
-## c!removepin
-
-Remove a pintrigger.
-
-**Usage:** `c!removepin <ID(s ...)>|all`
-
-**Argument:** 
-- `<ID(s ...)>|all`: The pintrigger ID(s) you want to remove, or all pintriggers.
-
-**Examples:** 
-- `c!removepin v43ThQ`: Remove pintrigger with ID v43ThQ.
-- `c!removepin all`: Remove all pintriggers.
-
-**Alias:** `c!-pin`
+**Aliases:** `-notif`
 
 ## c!removeregex
 
 Remove a regex filter.
 
-**Usage:** `c!removeregex <regex ...>|all`
+**Usage:** `c!removeregex <regex ...>`
+- `<regex ...>`: The regex filter you want to remove.
 
-**Argument:** 
-- `<regex ...>|all`: The regex filter you want to remove, or all regex filters.
+**Examples:**
+- `c!removeregex duck|poop`: Will remove the regex filter `duck|poop`.
 
-**Examples:** 
-- `c!removeregex duck|poop`: Remove the regex filter `duck|poop`.
-- `c!removeregex all`: Remove all regex filters.
+**Permission Level:** 2, Admins
 
-**Alias:** `c!-regex`
-
-## c!removerole
-
-Remove a rolereward.
-
-**Usage:** `c!removerole <ID(s ...)>|all`
-
-**Argument:** 
-- `<ID(s ...)>|all`: The rolereward ID(s) you want to remove, or all.
-
-**Examples:** 
-- `c!removerole bd9kJK`: Remove rolereward with ID bd9kJK.
-- `c!removerole all`: Remove all rolerewards.
-
-**Alias:** `c!-role`
-
-## c!removetimeoutrole
-
-Remove and disable the timeout role.
-
-**Usage:** `c!removetimeoutrole`
-
-**Alias:** `c!-timeoutrole`
+**Aliases:** `-regex`, `removefilter`, `-filter`
 
 ## c!resetcount
 
 Reset the count.
 
-**Usage:** `c!resetcount`
+**Permission Level:** 2, Admins
 
-**Aliases:** `c!re=count`, `c!reset`
+**Aliases:** `re=count`, `reset`
 
 ## c!resetscore
 
-Reset a member's or multiple members' score.
+Reset a member's score (or multiple members' scores)
 
-**Usage:** `c!resetscore <member(s ...) and/or role(s ...)>|all`
+**Usage:** `c!resetscore <member(s ...)>|all`
+- `<member(s ...)>|all`: The member(s) you want to add the score of, or all.
 
-**Argument:** 
-- `<member(s ...) and/or role(s ...)>|all`: The member(s) and/or role(s') member(s) you want to reset the score of, or all. If you use role names, they have to use underscores instead of spaces.
-
-**Examples:** 
-- `c!resetscore 110090225929191424`: Remove the score of user with ID 110090225929191424.
-- `c!resetscore @Promise#0001`: Remove the score of user Promise#0001.
-- `c!resetscore 110090225929191424 @Promise#0001`: Remove the scores of user with ID 110090225929191424 and user Promise#0001.
-- `c!resetscore @Staff Server_Moderators`: Remove the scores of all members of roles Staff and Server Moderators.
-- `c!resetscore 110090225929191424 @Promise#0001 @Staff Server_Moderators`: Mix members and roles if you want to.
+**Examples:**
+- `c!resetscore 110090225929191424`: Reset score of user with ID 110090225929191424.
+- `c!resetscore @Promise#0001`: Reset score of Promise#0001.
+- `c!resetscore 110090225929191424 @Promise#0001`: Reset score of user with ID 110090225929191424 and Promise#0001.
 - `c!resetscore all`: Reset all scores.
 
-**Alias:** `c!re=score`
+**Permission Level:** 2, Admins
+
+**Aliases:** `re=score`
 
 ## c!scoreboard
 
 Get the current scoreboard of the server.
 
-**Usage:** `c!scoreboard`
+**Permission Level:** 0, All
 
-**Aliases:** `c!leaderboard`, `c!^`, `c!top`
+**Aliases:** `leaderboard`, `^`, `top`
 
 ## c!setcount
 
 Set the count.
 
 **Usage:** `c!setcount <count>`
-
-**Argument:** 
 - `<count>`: The new count.
 
-**Aliases:** `c!set`, `c!=`, `c!=count`
+**Permission Level:** 1, Mods
+
+**Aliases:** `set`, `=`, `=count`
 
 ## c!setprefix
 
-Set a new prefix for the bot.
+Set the prefix of the bot.
 
-**Usage:** `c!setprefix <prefix ...>|reset`
+**Usage:** `c!setprefix [prefix ...]`
+- `[prefix ...]`: The new prefix you'd like to use. Leave blank to reset.
 
-**Argument:** 
-- `<prefix ...>|reset`: The new prefix. If you want to end your prefix with a space, end the prefix with {{SPACE}}. If you use reset, use the default prefix for the bot.
+**Examples:**
+- `c!setprefix c?`: Set the prefix to `c?`.
 
-**Examples:** 
-- `c!setprefix c?`: Set the prefix to c?, the help command would then be c?help.
-- `c!setprefix Hey Countr,{{SPACE}}`: Set the prefix to a Google Assistant-like one.
+**Permission Level:** 2, Admins
 
-**Aliases:** `c!prefix`, `c!=prefix`
+**Aliases:** `prefix`
 
 ## c!setscore
 
-Set a member's or multiple members' score.
+Set a member's score (or multiple members' scores)
 
-**Usage:** `c!setscore <member(s ...) and/or role(s ...)> <score>`
-
-**Arguments:** 
-- `<member(s ...) and/or role(s ...)>`: The member(s) or members of role(s) you want to set the score of
+**Usage:** `c!setscore <member(s ...)> <score>`
+- `<member(s ...)>`: The member(s) or members of role(s) you want to set the score of
 - `<score>`: The new score
 
-**Examples:** 
-- `c!setscore 110090225929191424 9999999`: Will set member with ID 110090225929191424's score to 9999999.
-- `c!setscore @Promise#0001 @CountingGods 1337`: Will set Promise#0001's and all members in role Counting Gods' score to 1337.
+**Examples:**
+- `c!setscore 110090225929191424 9999999`: Set score to 9999999 for user with ID 110090225929191424.
+- `c!setscore @Promise#0001 1337`: Set score to 1337 for Promise#0001's score.
+- `c!setscore 110090225929191424 @Promise#0001 1000`: Set score to 1000 for user with ID 110090225929191424 and for Promise#0001.
 
-**Alias:** `c!=score`
+**Permission Level:** 2, Admins
+
+**Aliases:** `=score`
 
 ## c!settimeoutrole
 
-Set a timeout role, so when someone counts &lt;fail amount&gt; times wrong within &lt;time&gt; seconds, they will get the role. Works best if you deny the role access to the channel.
+Set a member's score (or multiple members' scores)
 
 **Usage:** `c!settimeoutrole <role> <fails> <time> [<duration>]`
-
-**Arguments:** 
-- `<role>`: The role you want the timeout role to be. If you plan on using the role name, use _ instead of spaces.
-- `<fails>`: Fails within &lt;time&gt; seconds to get the role.
+- `<role>`: The role you want the timeout role to be. If you plan on using the role name, surround it with quotation marks.
+- `<fails>`: The amount of fails within &lt;time&gt; seconds to get the role.
 - `<time>`: Time in seconds users have to count &lt;fails&gt; times to get the role.
-- `[<duration>]`: Duration in seconds the role will stay on for. Default is forever.
+- `[<duration>]`: Duration in seconds the role will stay on for. Without a value, it will stay on the user forever.
 
-**Examples:** 
-- `c!settimeoutrole Timed_out 5 10`: This will give the user the role Timed out if they fail 5 times within 10 seconds.
-- `c!settimeoutrole 531877473437220866 3 30 120`: This will give the user the role with ID 531877473437220866 if they fail 3 times within 30 seconds, and the role will be removed after 2 minutes.
+**Examples:**
+- `c!settimeoutrole "Timed out" 5 10`: This will give the user the role Timed out if they fail 5 times within 10 seconds.
+- `c!settimeoutrole @Timeout 3 30 120`: This will give the user the role Timeout if they fail 3 times within 30 seconds, and the role will be removed after 2 minutes.
 
-**Alias:** `c!=timeoutrole`
+**Permission Level:** 2, Admins
 
-## c!settopic
+**Aliases:** `=timeoutrole`
 
-Set the topic of the channel.
+## c!setup
 
-**Usage:** `c!settopic <topic ...>|reset|disable`
+Quickly set up a counting channel. You only need to do this once.
 
-**Argument:** 
-- `<topic ...>|reset|disable`: The new topic. Use {{COUNT}} for the current count. If you put reset, it will be changed to the default. If you put disable, it will disable this functionality completely.
+**Permission Level:** 2, Admins
 
-**Example:** 
-- `c!settopic Count to infinity! Next count is {{COUNT}}.`: An example using the placeholder.
-
-**Aliases:** `c!topic`, `c!=topic`
-
-## c!toggle
-
-Manage modules you can enable or disable in your server.
-
-**Usage:** `c!toggle [<module>]`
-
-**Argument:** 
-- `[<module>]`: The module you want to toggle.
-
-**Example:** 
-- `c!toggle allow-spam`: Toggle the module allow-spam.
-
-**Aliases:** `c!modules`, `c!module`
+**Aliases:** `autosetup`, `quicksetup`, `configure`
 
 ## c!unlink
 
 Unlink the current counting channel.
 
-**Usage:** `c!unlink`
+**Permission Level:** 2, Admins
 
-**Alias:** `c!disconnect`
-
-## c!webboard
-
-Gets a link to the webboard of Countr
-
-**Usage:** `c!webboard`
-
-**Aliases:** `c!web`, `c!admininterface`, `c!interface`, `c!analytics`
+**Aliases:** `disconnect`
