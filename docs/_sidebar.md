@@ -19,6 +19,6 @@
 - [Links](#)
   - [Uptime](https://uptime.countr.xyz/)
   - [Source Code](https://github.com/countr/countr/)
-  - [Issue tracker](https://github.com/promise/countr/issues)
+  - [Issue tracker](https://github.com/countr/countr/issues)
   - [Support Server](https://promise.solutions/support)
   - [Twitter](https://twitter.com/countrbot)
