@@ -1,5 +1,9 @@
+<center>
+
 ![botlist.space Status](https://botlist.space/bot/467377486141980682/badge?property=status&style=flat-square)
 ![botlist.space Uptime](https://botlist.space/bot/467377486141980682/badge?property=uptime.1&style=flat-square)
+
+</center>
 
 - [About Countr](/)
   - [Features](/features)
