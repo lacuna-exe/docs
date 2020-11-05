@@ -4,11 +4,13 @@ Countr is not free for us to host, as the bill is rising we need some supporters
 
 ## Premium-only features
 
-| <center>Feature</center> | <center>$1</center> | <center>$3</center> | <center>$5</center> |
-|:--------|:---|:---|:---|
-| <center>Access to a Premium bot that will have less downtime</center> | <center>✅</center> | <center>✅</center> | <center>✅</center> |
-| <center>Analytics-leaderboard auto-refreshed | <center>✅<br />every 30 seconds</center> | <center>✅<br />every 3 seconds, "live view"</center> | <center>✅<br />every 3 seconds, "live view"</center> |
-| <center>A live leaderboard on Discord updating every 15 seconds (c!top, just with a timer)</center> | <!--❌--> | <center>✅</center> | <center>✅</center> |
+| <center>Premium Feature</center>                                                     | <center>$1</center> | <center>$3</center>  | <center>$5</center> |
+|:-------------------------------------------------------------------------------------|:--------------------|:---------------------|:--------------------|
+| <center>Access to the **Premium bot** with less downtime</center>                    | <center>✅</center> | <center>✅</center> | <center>✅</center> |
+| <center>Access to **fancy new beta features**</center>                               | <center>✅</center> | <center>✅</center> | <center>✅</center> |
+| <center>**Premium support** on our support server, as well as a fancy role!</center> | <center>✅</center> | <center>✅</center> | <center>✅</center> |
+| <center>**Live scoreboard**, like `c!top` but updates every minute</center>          |                     | <center>✅</center> | <center>✅</center>  |
+| <center>**More flows, triggers and actions.**<center>                                |                     | <center>✅<br/>• 2 triggers<br/>• 5 actions<br/>• 10 flows</center> | <center>✅<br/>• 3 triggers<br/>• 10 actions<br/>• 20 flows</center> |
 
 ## How to support
 
