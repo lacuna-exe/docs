@@ -1,5 +1,5 @@
 # Commands for Everyone
-Everyone have access to these commands.
+Everyone has access to these commands.
 
 - [c!count](#ccount): Get the current count.
 - [c!help](#chelp): Get help on how to use the bot.
@@ -9,16 +9,17 @@ Everyone have access to these commands.
 - [c!ping](#cping): Get the latency of the bot.
 - [c!removenotif](#cremovenotif): Remove a notification.
 - [c!scoreboard](#cscoreboard): Get the current scoreboard of the server.
+- [c!timeout](#ctimeout): See how long until you (or someone else) lose the timeout role.
 
 # Commands for Mods
-Everyone with the Manage Messages-permission have access to these commands.
+Everyone with the Manage Messages-permission has access to these commands.
 
 - [c!listflows](#clistflows): Get a list of all the flows.
 - [c!listregex](#clistregex): Get a list of regex filters.
 - [c!setcount](#csetcount): Set the count.
 
 # Commands for Admins
-Everyone with the Manage Server-permission have access to these commands.
+Everyone with the Manage Server-permission has access to these commands.
 
 - [c!addregex](#caddregex): Add a regex filter. (useful with the talking module)
 - [c!addtoscore](#caddtoscore): Add to a member's score (or multiple members' scores)
@@ -31,7 +32,7 @@ Everyone with the Manage Server-permission have access to these commands.
 - [c!link](#clink): Link a counting channel manually.
 - [c!module](#cmodule): Manage modules you can enable or disable in your server.
 - [c!prunescores](#cprunescores): Prune the scoreboard for members who have left your server.
-- [c!removefromscore](#cremovefromscore): Set a member's score
+- [c!removefromscore](#cremovefromscore): Remove from a member's score
 - [c!removeregex](#cremoveregex): Remove a regex filter.
 - [c!resetcount](#cresetcount): Reset the count.
 - [c!resetscore](#cresetscore): Reset a member's score (or multiple members' scores)
@@ -273,15 +274,15 @@ Prune the scoreboard for members who have left your server.
 
 ## c!removefromscore
 
-Set a member's score
+Remove from a member's score
 
-**Usage:** `c!removefromscore <member(s ...)> <score>`
-- `<member(s ...)>`: The member(s) or members of role(s) you want to set the score of
-- `<score>`: The new score
+**Usage:** `c!removefromscore <member(s ...)> <number>`
+- `<member(s ...)>`: The member(s) you want to remove from the score(s) of
+- `<number>`: The number of counts to remove
 
 **Examples:**
-- `c!removefromscore 110090225929191424 9999999`: Will set member with ID 110090225929191424's score to 9999999.
-- `c!removefromscore @Promise#0001 @CountingGods 1337`: Will set Promise#0001's and all members in role Counting Gods' score to 1337.
+- `c!removefromscore 110090225929191424 5`: Will remove 5 counts from the score of the member with ID 110090225929191424.
+- `c!removefromscore @Promise#0001 462870395314241537 100`: Will remove 100 counts from the scores of Promise#0001 and the member with ID 462870395314241537.
 
 **Permission Level:** 2, Admins
 
@@ -416,6 +417,17 @@ Quickly set up a counting channel. You only need to do this once.
 **Permission Level:** 2, Admins
 
 **Aliases:** `autosetup`, `quicksetup`, `configure`
+
+## c!timeout
+
+See how long until you (or someone else) lose the timeout role.
+
+**Usage:** `c!timeout [<member>]`
+- `[<member>]`: The user you want to check. Default is yourself.
+
+**Permission Level:** 0, All
+
+**Aliases:** `?`, `timer`
 
 ## c!unlink
 

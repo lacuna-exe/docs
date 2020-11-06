@@ -28,7 +28,7 @@ fs.readdir("./src/commands/", (err, files) => {
   for (const file of files) if (file.endsWith(".js")) {
     const
       commandName = file.replace(".js", ""),
-      commandFile = require(`../countr/src/commands/${file}`);
+      commandFile = require(`../countr-djs12/src/commands/${file}`);
     
     if (commandFile.permissionRequired < 4) {
       console.log(commandFile.permissionRequired, commandName, content);
@@ -57,7 +57,7 @@ fs.readdir("./src/commands/", (err, files) => {
 
   commandDoc.push(...commands.join("\n\n").split("\n"));
 
-  fs.writeFileSync("../countr-docs/docs/commands.md", commandDoc.join("\n"), "utf8");
+  fs.writeFileSync("../countr-docs-new/docs/commands.md", commandDoc.join("\n"), "utf8");
 
   process.exit(0);
 });
