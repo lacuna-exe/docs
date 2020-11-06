@@ -33,7 +33,7 @@ Yes, start your message with `!` and Countr will ignore your message. You need t
 
 ## What information is getting stored in your systems? Can I request your data?
 
-We store the necessary data that Countr needs, no unnecessary user information is getting stored. You can do `c!dump` to dump the server information to your DMs. We do not store anything else.
+We store the necessary data that Countr needs, no unnecessary user information is getting stored. You can do `c!dump` to dump the server information to your DMs. We do not store anything else. You have to be the server owner to use this command.
 
 ## Countr is slow, please fix.
 

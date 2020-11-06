@@ -36,7 +36,7 @@ Before version 12, we had something called rolerewards and pintriggers. They wer
 
 # Triggers
 
-A trigger is something that will activate and run the flow. **Available triggers:**
+A trigger is something that will activate and run the flow. If you're a premium user and have multiple triggers, any *one* of the triggers can activate the flow. **Available triggers:**
 - **Each X number:** This will get triggered whenever a user counts a multiple of X. For example, if X is 10, this will trigger on 10, 20, 30 etc.
 - **Only number X:** This will get triggered whenever a user counts the number X, and only the number X.
 - **Score of X:** This will get triggered whenever a user has counted a total of X counts.
