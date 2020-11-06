@@ -14,7 +14,7 @@ const
     .replace(/>/g, "&gt;"),
   permissionRoles = ["All", "Mods", "Admins", "Server Owner"],
   permissionRoleDescriptions = [
-    "Everyone have access to these commands.",
+    "Everyone has access to these commands.",
     "Everyone with the Manage Messages-permission has access to these commands.",
     "Everyone with the Manage Server-permission has access to these commands.",
     "Only the server owner has access to these commands."
