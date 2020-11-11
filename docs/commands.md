@@ -38,7 +38,7 @@ Everyone with the Manage Server-permission has access to these commands.
 - [c!resetscore](#cresetscore): Reset a member's score (or multiple members' scores)
 - [c!setprefix](#csetprefix): Set the prefix of the bot.
 - [c!setscore](#csetscore): Set a member's score (or multiple members' scores)
-- [c!settimeoutrole](#csettimeoutrole): Set a member's score (or multiple members' scores)
+- [c!settimeoutrole](#csettimeoutrole): Set up a timeout role.
 - [c!setup](#csetup): Quickly set up a counting channel. You only need to do this once.
 - [c!unlink](#cunlink): Unlink the current counting channel.
 
@@ -206,9 +206,15 @@ Link a counting channel manually.
 
 Get a list of all the flows.
 
+**Usage:** `c!listflows [flowID]`
+- `[flowID]`: ID of a flow
+
+**Examples:**
+- `c!listflows hY5C4i`: Get information of the flow with ID `hY5C4i`
+
 **Permission Level:** 1, Mods
 
-**Aliases:** `flows`
+**Aliases:** `listflow`, `flows`, `flow`
 
 ## c!listregex
 
@@ -394,7 +400,7 @@ Set a member's score (or multiple members' scores)
 
 ## c!settimeoutrole
 
-Set a member's score (or multiple members' scores)
+Set up a timeout role.
 
 **Usage:** `c!settimeoutrole <role> <fails> <time> [<duration>]`
 - `<role>`: The role you want the timeout role to be. If you plan on using the role name, surround it with quotation marks.
