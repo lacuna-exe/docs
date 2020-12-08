@@ -21,7 +21,7 @@ You can currently support us in two ways: [on Patreon](https://patreon.com/promi
 > [!WARNING]
 > - You must be in the support server to get your rewards, this is due to our automated credits system.
 > - You must have connected your Discord to Patreon to get your Patreon-rewards. Get help from [this guide](https://support.patreon.com/hc/en-us/articles/212052266-Get-my-Discord-role#h_21f22930-84c5-4950-b6b1-3e83312f66dc) made by Patreon themselves.
-> - No refunds are accepted, especially Nitro boosts as these doesn't directly support us but rather the Discord server.
+> - No refunds are accepted, especially Nitro boosts as these don't directly support us but rather the Discord server.
 > - The owner of the server must be the one donating.
 
 > [!NOTE]
