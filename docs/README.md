@@ -5,7 +5,7 @@
 
 Countr is an advanced counting bot which can manage a counting channel in your guild. It's very simple to add it to your server:
 
-1. Add the bot with [this invite link](https://discord.com/oauth2/authorize?client_id=467377486141980682&permissions=805317648&scope=bot).
+1. Add the bot with [this invite link](https://discord.com/api/oauth2/authorize?client_id=467377486141980682&permissions=805334032&scope=bot%20applications.commands).
 2. Do `c!setup`, or link a pre-existing channel with `c!link <channel>` and `c!set <count>`.
 3. Count in the counting channel.
 
