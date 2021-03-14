@@ -27,12 +27,9 @@ Before version 12, we had something called rolerewards and pintriggers. They wer
 
 # Limits
 
-| | <center>Triggers per flow</center> | <center>Actions per flow</center> | <center>Flows per server</center> |
-|:-|:-|:-|:-|
-| <center>Countr Free</center> | <center>1</center> | <center>3</center> | <center>5</center> |
-| <center>$1 Premium</center> | <center>1</center> | <center>3</center> | <center>5</center> |
-| <center>$3 Premium</center> | <center>2</center> | <center>5</center> | <center>10</center> |
-| <center>$5 Premium</center> | <center>3</center> | <center>10</center> | <center>20</center> |
+You can have 3 triggers and 10 actions per flow, and 25 flows total on your server. Premium gets 25 of each.
+
+You might be wondering why we have these limitations. It's simply because the more triggers, actions and flows a server has, the more processing power will it use to process a count. With over a million counts every week, this adds up a lot. We feel like this limit is plenty for the average Discord user, but if you want to go completely insand then you can do that with the Premium solution for only $1/month.
 
 # Triggers
 
