@@ -38,6 +38,8 @@ A trigger is something that will activate and run the flow. If you're a premium 
 - **Only number X:** This will get triggered whenever a user counts the number X, and only the number X.
 - **Score of X:** This will get triggered whenever a user has counted a total of X counts.
 - **Regex match:** This will get triggered when a count matches a regex.
+- **Count Fail** This will get triggered when someone fails to count the correct number.
+- **Timeout role triggered** This will get triggered whenever someone gets the timeout role.
 
 # Actions
 
@@ -48,3 +50,4 @@ An action is something the flow will do once it's triggered. Actions run asynchr
 - **Pin the count message**
 - **Send a message:** This will send a message in a channel (it doesn't have to be the counting channel!)
 - **Lock the counting channel:** This will lock the counting channel for the everyone-role, and will be read-only.
+- **Reset the current count** Reset the count to 0.
