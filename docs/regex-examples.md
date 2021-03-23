@@ -14,8 +14,8 @@ Things in the bot that currently accept regex
 
 | What  it filters                                         | Regex/ Resource                    |
 |:---------------------------------------------------------|:-----------------------------------|
-| Common things                                            |[hateRegex](https://ihateregex.io/) |
-| Duck or poop                                             | `duck|poop`                        |
+| Common things                                            |[IhateRegex](https://ihateregex.io/) |
+| Duck or poop                                             | ` duck|poop `                        |
 | Capital Letters                                          |  `[A-Z]`                           |
 |  A, B, C, X, Y, Z - regardless if it's capital or not.   | `[A-Ca-cX-Zx-z]`                   |
  
