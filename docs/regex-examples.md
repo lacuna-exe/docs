@@ -6,8 +6,8 @@ Things in the bot that currently accept regex
 
 ## Common Regex's for flows
 
-| Regex   | Description |
-|:---------------|:-----------|:------------|
+| Regex                           | Description             |
+|:--------------------------------|:------------------------|
 | `(\d{0,}69[^0-9])|(\d{0,}69$)`  | Any number ending in 69 |
 
 ## Common Regex's for filters
