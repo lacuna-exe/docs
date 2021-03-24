@@ -1,6 +1,3 @@
-> [!NOTE]
-> Countr has just been rewritten. If you find bugs, please go to our [issue tracker](https://github.com/countr/countr/issues) or go to our [support server](https://discord.gg/Ccj5bjb) to let us know, thank you!
-
 # Countr
 
 Countr is an advanced counting bot which can manage a counting channel in your guild. It's very simple to add it to your server:
