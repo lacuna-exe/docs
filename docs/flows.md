@@ -27,12 +27,9 @@ Before version 12, we had something called rolerewards and pintriggers. They wer
 
 # Limits
 
-| | <center>Triggers per flow</center> | <center>Actions per flow</center> | <center>Flows per server</center> |
-|:-|:-|:-|:-|
-| <center>Countr Free</center> | <center>1</center> | <center>3</center> | <center>5</center> |
-| <center>$1 Premium</center> | <center>1</center> | <center>3</center> | <center>5</center> |
-| <center>$3 Premium</center> | <center>2</center> | <center>5</center> | <center>10</center> |
-| <center>$5 Premium</center> | <center>3</center> | <center>10</center> | <center>20</center> |
+You can have 3 triggers and 10 actions per flow, and 25 flows total on your server. Premium gets 25 of each.
+
+You might be wondering why we have these limitations. It's simply because the more triggers, actions and flows a server has, the more processing power will it use to process a count. With over a million counts every week, this adds up a lot. We feel like this limit is plenty for the average Discord user, but if you want to go completely insand then you can do that with the Premium solution for only $1/month.
 
 # Triggers
 
@@ -41,6 +38,8 @@ A trigger is something that will activate and run the flow. If you're a premium 
 - **Only number X:** This will get triggered whenever a user counts the number X, and only the number X.
 - **Score of X:** This will get triggered whenever a user has counted a total of X counts.
 - **Regex match:** This will get triggered when a count matches a regex.
+- **Count Fail** This will get triggered when someone fails to count the correct number.
+- **Timeout role triggered** This will get triggered whenever someone gets the timeout role.
 
 # Actions
 
@@ -51,3 +50,4 @@ An action is something the flow will do once it's triggered. Actions run asynchr
 - **Pin the count message**
 - **Send a message:** This will send a message in a channel (it doesn't have to be the counting channel!)
 - **Lock the counting channel:** This will lock the counting channel for the everyone-role, and will be read-only.
+- **Reset the current count** Reset the count to 0.
