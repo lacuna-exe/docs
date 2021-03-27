@@ -1,6 +1,6 @@
 # Regex's
 
-Things in the bot that currently accept regex
+Things in the bot that currently accept regex.
 * Flows - Action (4- Regex Match)
 * Regex Filters - Used to filter messages in the counting channel- specifcally for modules that repost the message.
 
@@ -19,6 +19,8 @@ Things in the bot that currently accept regex
 | Capital Letters                                          |  `[A-Z]`                           |
 |  A, B, C, X, Y, Z - regardless if it's capital or not.   | `[A-Ca-cX-Zx-z]`                   |
  
-Get info on how to create a regex [here](https://flaviocopes.com/javascript-regular-expressions/#regular-expressions-choices)
 
-Test and expermient with new regex's [here](https://regexr.com/)
+> [!NOTE]
+> - Get info on how to create a regex [here](https://flaviocopes.com/javascript-regular-expressions/#regular-expressions-choices).
+> - Test and expermient with new regex's [here](https://regexr.com/).
+> - Found a neat Regex you'd like to add to this list? You can create a pull request [here](https://github.com/countr/docs/blob/master/docs/regex-examples.md).
