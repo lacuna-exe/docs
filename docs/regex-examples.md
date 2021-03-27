@@ -8,7 +8,7 @@ Things in the bot that currently accept regex
 
  | Regex                                  | Description             |
  |:---------------------------------------|:------------------------|
- |   ^\d*(<number>)( |$)          | Any number ending in <number> |
+ |   ^\d*(69)( \|$)          | Any number ending in 69 |
 
 ## Common Regex's for filters
 
