@@ -2,6 +2,7 @@
 
 - [What is a flow?](#what-is-a-flow)
 - [What is the purpose of a flow?](#what-is-the-purpose-of-a-flow)
+- [How do I get started?](#how-do-i-get-stated)
 - [Ideas for flows](#ideas-for-flows)
 - [Limits](#limits)
 - [Triggers](#triggers)
@@ -16,6 +17,9 @@ Trigger any flow whenever you want to, automatically.
 # What is the purpose of a flow?
 
 Before version 12, we had something called rolerewards and pintriggers. They were of course neat additions on their own, but people wanted more ways to customize. Maybe removing a role, or sending a message in a channel. So we simply merged all the ideas together into a concept, and we called it flows. 
+
+# How do I get started?
+Run `c!createflow` and the bot will create a channel and guide you through making a flow.
 
 # Ideas for flows
 
