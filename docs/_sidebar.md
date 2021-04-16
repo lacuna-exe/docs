@@ -21,4 +21,5 @@
   - [Source Code](https://github.com/countr/countr/)
   - [Issue tracker](https://github.com/countr/countr/issues)
   - [Support Server](https://promise.solutions/support)
+  - [Privacy Policy](https://countr.xyz/privacy)
   - [Twitter](https://twitter.com/countrbot)
