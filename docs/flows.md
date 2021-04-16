@@ -42,6 +42,7 @@ A trigger is something that will activate and run the flow. If you're a premium 
 - **Only number X:** This will get triggered whenever a user counts the number X, and only the number X.
 - **Score of X:** This will get triggered whenever a user has counted a total of X counts.
 - **Regex match:** This will get triggered when a count matches a regex.
+     - Regex examples can be found [here](https://docs.countr.xyz/regex-examples)
 - **Count Fail** This will get triggered when someone fails to count the correct number.
 - **Timeout role triggered** This will get triggered whenever someone gets the timeout role.
 
