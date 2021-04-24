@@ -15,4 +15,4 @@ You can currently use regex in regex filters and in flows. We've created a list 
 
 ## Other examples
 
-Check out (iHateRegex.io](https://ihateregex.io/) for more examples! Also check out their [cheatsheet](https://ihateregex.io/cheatsheet).
+Check out [iHateRegex.io](https://ihateregex.io/) for more examples! Also check out their [cheatsheet](https://ihateregex.io/cheatsheet).
