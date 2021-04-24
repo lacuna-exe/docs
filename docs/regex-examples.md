@@ -1,12 +1,12 @@
 # Regex Examples
 
-You can currently use RegEx in RegEx filters and in Flows. We've created a list of common RegEx filters that you can copy and paste to customize Countr for your needs.
+You can currently use Regex in Regex filters and in Flows. We've created a list of common Regex filters that you can copy and paste to customize Countr for your needs.
 
-- Get info on how to create your own custom RegEx [here](https://flaviocopes.com/javascript-regular-expressions/#regular-expressions-choices).
-- Test regex filters [here](https://regexr.com/). Use the flag "global".
-- If you found a neat RegEx you want to add to the list then you can create a pull request [here](https://github.com/countr/docs/blob/master/docs/regex-examples.md).
+- Get info on how to create your own custom Regex [here](https://flaviocopes.com/javascript-regular-expressions/#regular-expressions-choices).
+- Test Regex filters [here](https://regexr.com/). Use the flag "global".
+- If you found a neat Regex you want to add to the list then you can create a pull request [here](https://github.com/countr/docs/blob/master/docs/regex-examples.md).
 
-| RegEx | Description |
+| Regex | Description |
 |:------|:------------|
 | `duck\|poop` | words "duck" or "poop" |
 | `[A-Z]` | all capital letters |
@@ -15,4 +15,4 @@ You can currently use RegEx in RegEx filters and in Flows. We've created a list 
 
 ## Other examples
 
-Check out [iHateRegEx.io](https://ihateregex.io/) for more examples! Also check out their [cheatsheet](https://ihateregex.io/cheatsheet).
+Check out [iHateRegex.io](https://ihateregex.io/) for more examples! Also check out their [cheatsheet](https://ihateregex.io/cheatsheet).
