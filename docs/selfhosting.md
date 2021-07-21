@@ -1,6 +1,7 @@
 # Self-hosting
 
-We do not recommend self-hosting the bot, but it's always an option. To selfhost the bot yourself, you need to have:
+We do not recommend self-hosting the bot, but it's always an option. To self-host the bot yourself, you need to have:
+
 * Node - confirmed working on v12.16.1
 * npm - comes with Node, the version shouldn't really matter
 * A Discord bot token, and having the bot in your server
@@ -8,6 +9,7 @@ We do not recommend self-hosting the bot, but it's always an option. To selfhost
 * A clone of the source code, this can be found [here](https://github.com/countr/countr) and needs to be extracted to a folder.
 
 We will have to do this once:
+
 * Rename `config.example.json` to `config.json`, and fill in the values.
 * Do `npm i` inside the folder, and wait for it to finish.
 
@@ -20,9 +22,9 @@ After all this, start the bot with `npm run start`.
 
 | Property       | Default    | Description |
 |:---------------|:-----------|:------------|
-| `token`        |            | The Discord bot token | 
+| `token`        |            | The Discord bot token |
 | `database_uri` |            | The mongodb.com-user and password-URI. | N/A |
-| `admins`       | `[]`       | An array of admins, the first one being the owner. | 
+| `admins`       | `[]`       | An array of admins, the first one being the owner. |
 | `prefix`       | `"c!"`     | The prefix you want the bot to use for commands. |
 | `mainGuild`    |            | The main guild the bot will be in. |
 | `color`        | `12404274` | The brand color in decimal number. |
