@@ -8,7 +8,7 @@ You can currently use regex in regex filters and in flows. We've created a list 
 
 | Regex | Description |
 |:------|:------------|
-| `duck\|poop` | words "duck" or "poop" |
+| `duck\|goose` | words "duck" or "goose" |
 | `[A-Z]` | all capital letters |
 | `[A-Ca-cX-Zx-z]` | letters A, B, C, X, Y, Z, regardless of capitalization |
 | `^\d*(69)( \|$)` | any number ending in 69 |
