@@ -1,7 +1,7 @@
 <center>
 
-![botlist.space Status](https://botlist.space/bot/467377486141980682/badge?property=status&style=flat-square)
-![botlist.space Uptime](https://botlist.space/bot/467377486141980682/badge?property=uptime.1&style=flat-square)
+![Countr Status](http://kai-bot.but-it-actually.works/badge/467377486141980682/status.svg)
+![Countr Uptime](http://kai-bot.but-it-actually.works/badge/467377486141980682/uptime.svg)
 
 </center>
 

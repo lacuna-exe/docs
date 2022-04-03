@@ -36,7 +36,7 @@ fs.readdir("./src/commands/", (err, files) => {
       commands.push([
         `## c!${commandName}`,
         fixMarkdown(commandFile.description),
-        Object.keys(commandFile.usage).length ? `**Usage:** \`c!${commandName}${Object.keys(commandFile.usage).map(a => ` ${a}`).join("")}\`${Object.keys(commandFile.usage).map(a => `\n- \`${a}\`: ${fixMarkdown(commandFile.usage[a])}`).join("")}` : null,
+        Object.keys(commandFile.usage).length ? `**Usage:** \`c!${commandName}${Object.keys(commandFile.usage).map(a => ` ${a}`).join("")}\`\n\n${Object.keys(commandFile.usage).map(a => `- \`${a}\`: ${fixMarkdown(commandFile.usage[a])}`).join("\n")}` : null,
         Object.keys(commandFile.examples).length ? `**Examples:**\n${Object.keys(commandFile.examples).map(ex => `- \`c!${commandName}${ex ? ` ${ex}` : ""}\`: ${fixMarkdown(commandFile.examples[ex])}`).join("\n")}` : null,
         `**Permission Level:** ${commandFile.permissionRequired}, ${permissionRoles[commandFile.permissionRequired]}`,
         commandFile.aliases.length ? `**Aliases:** ${commandFile.aliases.map(a => `\`${a}\``).join(", ")}` : null
@@ -49,6 +49,7 @@ fs.readdir("./src/commands/", (err, files) => {
 
   for (const permission in content) commandDoc.push(
     `# Commands for ${["Everyone", "Mods", "Admins", "Server Owners"][permission]}`,
+    "",
     permissionRoleDescriptions[permission],
     "",
     ...Object.keys(content[permission]).map(command => `- [c!${command}](#c${command}): ${content[permission][command]}`),
